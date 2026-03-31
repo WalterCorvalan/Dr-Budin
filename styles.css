@@ -195,26 +195,28 @@ main {
   margin-bottom: 20px;
 }
 
+/* Busca y reemplaza esta parte en styles.css */
+.item-img {
+  width: 100px; /* Aumentado de 65px a 100px */
+  height: 100px; /* Aumentado de 65px a 100px */
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); /* Sombra un poquito más profunda */
+  cursor: zoom-in;
+}
+
+/* Ajuste opcional para que la info no quede pegada */
 .item-row {
   display: flex;
   align-items: center;
-  padding: 12px 14px;
+  padding: 15px; /* Un poquito más de aire arriba y abajo */
   border-bottom: 1px solid var(--sand);
-  gap: 14px;
+  gap: 16px; /* Más espacio entre foto y texto */
 }
 
 .item-row:last-child {
   border-bottom: none;
-}
-
-.item-img {
-  width: 65px;
-  height: 65px;
-  border-radius: 10px;
-  object-fit: cover;
-  flex-shrink: 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  cursor: zoom-in;
 }
 
 .item-info {

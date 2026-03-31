@@ -60,16 +60,19 @@ function renderCatalog(products) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
+    // Dentro de la función renderCatalog en script.js, reemplaza este bloque:
+
     // Lógica de imagen: Si hay link muestra la foto, sino muestra el emoji
     let imagenHTML = "";
     if (p.imagen && p.imagen.startsWith("http")) {
       imagenHTML = `<img src="${p.imagen}" class="item-img" alt="${p.nombre}" onclick="openModal('${p.imagen}')">`;
     } else {
       const emoji = p.subcategoria === "panes" ? "🍞" : "🧁";
-      imagenHTML = `<div class="item-img-placeholder" style="width:65px; height:65px; background:#eee; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:24px; flex-shrink:0;">${emoji}</div>`;
+      // Actualizamos a 100px y aumentamos el tamaño del emoji (font-size: 40px)
+      imagenHTML = `<div class="item-img-placeholder" style="width:100px; height:100px; background:#f0f0f0; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:40px; flex-shrink:0;">${emoji}</div>`;
     }
 
-    let html = "";
+      let html = "";
 
     // AHORA LAS PEPAS ENTRAN AQUÍ TAMBIÉN (Caso Precio Único)
     if (p.precioChico && p.precioGrande) {
