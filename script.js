@@ -126,28 +126,37 @@ function sendWhatsAppOrder() {
     return;
   }
 
-  // >>> REEMPLAZA LAS 'X' POR TU NÚMERO (Ejemplo: 549385xxxxxxx) <<<
-  const NUMERO_WHATSAPP = "3856865979"; 
+  // >>> REEMPLAZA LAS 'X' POR TU NÚMERO <<<
+  const NUMERO_WHATSAPP = "3856865979";
 
   let total = 0;
   
-  // Mensaje súper limpio: Solo el pedido.
-  let texto = "¡Hola Dr. Budín! 👨‍🍳\n";
-  texto += "Te envío mi pedido:\n\n";
+  let texto = "¡Hola Dr. Budín!\n";
+  texto += "Quiero realizar el siguiente pedido:\n\n";
+  texto += "*MI CARRITO:*\n";
+  texto += "-----------------------------------\n";
 
   cart.forEach(item => {
     let subtotal = item.price * item.qty;
     total += subtotal;
-    texto += `- ${item.qty} x ${item.name} ($${subtotal.toLocaleString('es-AR')})\n`;
+    texto += `- ${item.qty} x ${item.name}\n`;
+    texto += `  Subtotal: $${subtotal.toLocaleString('es-AR')}\n`;
   });
 
   texto += "-----------------------------------\n";
-  texto += `*TOTAL: $${total.toLocaleString('es-AR')}*\n\n`;
+  texto += `*TOTAL A PAGAR: $${total.toLocaleString('es-AR')}*\n\n`;
+  
+  // --- NUEVO: CAPTURAR LAS ACLARACIONES ---
+  const notas = document.getElementById("cart-notes-text").value.trim();
+  if (notas !== "") {
+    texto += "*ACLARACIONES:*\n";
+    texto += `📝 ${notas}\n\n`;
+  }
+  
   texto += "Aguardamos tu respuesta para coordinar pago y entrega. ¡Gracias!";
-
+  
   const mensajeCodificado = encodeURIComponent(texto);
   const link = `https://wa.me/${NUMERO_WHATSAPP}?text=${mensajeCodificado}`;
 
   window.open(link, '_blank');
-
 }

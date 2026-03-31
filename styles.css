@@ -16,468 +16,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-html,
-body {
-  height: 100%;
-  overflow: hidden;
-}
-
-body {
-  background-color: var(--cream);
-  color: var(--text);
-  font-family: "Nunito", sans-serif;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-/* ── FONDO DE MAGDALENAS ── */
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  /* PUEDES CAMBIAR ESTA URL POR LA FOTO DE FONDO QUE PREFIERAS */
-  background-image: url("https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?q=80&w=800&auto=format&fit=crop");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.12;
-  z-index: -1;
-}
-
-/* ── HEADER CON LOGO E IMAGEN ── */
-header {
-  flex-shrink: 0;
-  background: var(--brown);
-  padding: 12px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-.header-logo {
-  height: 60px;
-  width: auto;
-  border-radius: 50%;
-}
-.brand {
-  font-family: "Pacifico", cursive;
-  color: var(--rose);
-  font-size: 2.2rem;
-  line-height: 1;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* ── ACLARACIONES SIEMPRE VISIBLES ── */
-.aclaraciones-card {
-  background: rgba(255, 255, 255, 0.95);
-  border: 2px dashed var(--rose);
-  border-radius: 12px;
-  margin: 15px 15px 0;
-  padding: 15px;
-  box-shadow: 0 4px 8px rgba(92, 61, 46, 0.08);
-  flex-shrink: 0;
-}
-.aclaraciones-card h3 {
-  font-family: "Pacifico", cursive;
-  color: var(--rose-dark);
-  font-size: 1.3rem;
-  margin-bottom: 8px;
-  text-align: center;
-}
-.aclaraciones-card ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.aclaraciones-card li {
-  font-size: 0.85rem;
-  color: var(--text);
-  padding-left: 18px;
-  position: relative;
-  line-height: 1.4;
-}
-.aclaraciones-card li::before {
-  content: "🧁";
-  position: absolute;
-  left: 0;
-  font-size: 0.8rem;
-  top: 1px;
-}
-
-/* ── TABS ── */
-.tabs {
-  flex-shrink: 0;
-  margin-top: 10px;
-  display: flex;
-  overflow-x: auto;
-  scrollbar-width: none;
-  padding: 0 12px;
-  background: rgba(255, 248, 240, 0.8);
-}
-.tabs::-webkit-scrollbar {
-  display: none;
-}
-.tab {
-  flex-shrink: 0;
-  padding: 12px 14px 10px;
-  font-size: 0.95rem;
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
-  color: var(--muted);
-  cursor: pointer;
-  border-bottom: 3px solid transparent;
-  margin-bottom: -2px;
-  white-space: nowrap;
-  transition: all 0.2s;
-  background: none;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-.tab.active {
-  color: var(--rose-dark);
-  border-bottom-color: var(--rose-dark);
-}
-
-/* ── MAIN ── */
-main {
-  flex: 1;
-  overflow-y: auto;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* ── PANELS ── */
-.panel {
-  display: none;
-  padding: 18px 18px 10px;
-  animation: fadeIn 0.3s ease;
-}
-.panel.active {
-  display: block;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.panel-title {
-  font-family: "Pacifico", cursive;
-  font-size: 1.8rem;
-  color: var(--brown);
-  margin-bottom: 2px;
-  text-align: center;
-}
-.panel-subtitle {
-  font-size: 0.85rem;
-  color: var(--muted);
-  margin-bottom: 18px;
-  text-align: center;
-  font-weight: 600;
-}
-
-/* ── LISTAS CON IMÁGENES (Estilo Delivery) ── */
-.item-list {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(92, 61, 46, 0.1);
-  margin-bottom: 20px;
-}
-.item-row {
-  display: flex;
-  align-items: center;
-  padding: 12px 14px;
-  border-bottom: 1px solid var(--sand);
-  gap: 14px;
-}
-.item-row:last-child {
-  border-bottom: none;
-}
-
-/* Miniatura del producto: Cuadrada y compacta */
-.item-img {
-  width: 65px;
-  height: 65px;
-  border-radius: 10px;
-  object-fit: cover; /* Ajusta la imagen sin deformar */
-  flex-shrink: 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  cursor: zoom-in; /* Indica que se puede agrandar */
-}
-
-/* Contenedor de texto y precio */
-.item-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 6px;
-}
-
-.item-label {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--text);
-  line-height: 1.2;
-}
-
-/* Contenedor de precios */
-.item-price-area {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.item-price {
-  font-weight: 800;
-  color: var(--rose-dark);
-  font-size: 1.05rem;
-}
-
-/* Precios dobles (Grande/Pequeño) */
-.price-pair {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-.price-pair .pt {
-  font-size: 0.8rem;
-  background: var(--rose);
-  color: white;
-  border-radius: 6px;
-  padding: 3px 8px;
-  font-weight: 800;
-}
-
-/* ── AGREGADOS ── */
-.agrega-title {
-  font-family: "Pacifico", cursive;
-  font-size: 1.3rem;
-  color: var(--brown);
-  margin: 10px 0 10px;
-  text-align: center;
-}
-.agrega-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-.agrega-pill {
-  background: white;
-  border: 1px solid var(--sand);
-  border-radius: 10px;
-  padding: 10px 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 6px rgba(92, 61, 46, 0.08);
-}
-.agrega-pill .al {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--brown);
-}
-.agrega-pill .ap {
-  font-size: 0.85rem;
-  font-weight: 800;
-  color: var(--rose-dark);
-}
-
-.nota {
-  background: rgba(244, 228, 212, 0.8);
-  border-radius: 8px;
-  padding: 12px;
-  font-size: 0.85rem;
-  color: var(--brown);
-  font-weight: 600;
-  text-align: center;
-  margin-top: 15px;
-}
-
-/* ── INFO GLOBAL INFERIOR ── */
-.global-info {
-  padding: 15px 18px 30px;
-  border-top: 2px dashed var(--sand);
-  margin-top: 10px;
-  text-align: center;
-}
-.special-tag {
-  display: block;
-  text-align: center;
-  background: var(--rose-dark);
-  color: white;
-  font-size: 0.85rem;
-  padding: 4px 12px;
-  border-radius: 20px;
-  margin: 0 auto 10px;
-  font-weight: 700;
-  width: fit-content;
-}
-.pago-chips {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 8px;
-}
-.pago-chip {
-  background: var(--brown);
-  color: var(--cream);
-  border-radius: 20px;
-  padding: 8px 20px;
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-
-/* ── FOOTER COMPACTO ── */
-footer {
-  flex-shrink: 0;
-  background: var(--brown);
-  padding: 12px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  border-top: 3px solid var(--rose);
-  text-align: left;
-}
-.footer-text {
-  flex: 1;
-}
-.footer-text p {
-  font-size: 0.75rem;
-  color: #f4e4d4;
-  line-height: 1.3;
-  font-weight: 600;
-  margin-top: 2px;
-}
-.footer-text strong {
-  color: white;
-  font-family: "Pacifico", cursive;
-  font-size: 1.1rem;
-  display: block;
-  letter-spacing: 0.5px;
-}
-.whatsapp-btn {
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: #25d366;
-  color: white;
-  padding: 10px 16px;
-  border-radius: 24px;
-  font-size: 0.85rem;
-  font-weight: 800;
-  text-decoration: none;
-  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
-  transition: transform 0.2s;
-}
-.whatsapp-btn:active {
-  transform: scale(0.95);
-}
-
-/* ── MODAL (LIGHTBOX) PARA AGRANDAR FOTOS ── */
-.modal {
-  display: none; /* Oculto por defecto */
-  position: fixed;
-  z-index: 1000; /* Encima de todo */
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro con transparencia */
-  cursor: zoom-out; /* Indica que se cierra al hacer clic */
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 90%; /* Ancho máximo en pantalla */
-  max-height: 90%; /* Alto máximo en pantalla */
-  object-fit: contain; /* Mantiene proporciones sin cortar */
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-
-  /* Animación de apertura */
-  animation-name: zoom;
-  animation-duration: 0.3s;
-}
-
-@keyframes zoom {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-/* Botón de cerrar (×) */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 25px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-  color: var(--rose);
-  text-decoration: none;
-  cursor: pointer;
-}
-
-@media (min-width: 600px) {
-  .panel {
-    padding: 24px 32px 10px;
-  }
-  .global-info {
-    padding: 20px 32px 30px;
-  }
-  .agrega-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-
-:root {
-  --cream: #fff8f0;
-  --rose: #f29c9c;
-  --rose-dark: #d86c6c;
-  --brown: #4a3324;
-  --brown-light: #8b6148;
-  --sand: #f4e4d4;
-  --text: #3a2a1e;
-  --muted: #8a7060;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
-}
-
 html, body {
   height: 100%;
   overflow: hidden;
@@ -615,7 +153,7 @@ main {
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: 90px; /* Importante: da espacio abajo para que no lo tape el carrito flotante */
+  padding-bottom: 90px;
 }
 
 .panel {
@@ -694,7 +232,6 @@ main {
   line-height: 1.2;
 }
 
-/* ── NUEVOS BOTONES DE AGREGAR ── */
 .item-actions {
   display: flex;
   gap: 8px;
@@ -714,13 +251,34 @@ main {
   transition: all 0.2s;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
 }
 
 .btn-add:active {
   transform: scale(0.95);
   background: var(--rose);
   color: white;
+}
+
+/* ── DISEÑO DEL NUEVO ICONO '+' ── */
+.icon-plus {
+  background-color: var(--rose);
+  color: white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1;
+  transition: background-color 0.2s;
+}
+
+.btn-add:active .icon-plus {
+  background-color: white;
+  color: var(--rose);
 }
 
 .btn-add span.price {
@@ -837,7 +395,7 @@ footer {
   padding: 12px 20px;
   display: flex;
   align-items: center;
-  justify-content: center; /* Centramos porque el boton paso al carrito */
+  justify-content: center;
   gap: 10px;
   border-top: 3px solid var(--rose);
   text-align: center;
@@ -906,7 +464,6 @@ footer {
   text-decoration: none;
 }
 
-/* ── DISEÑO DEL CARRITO ── */
 .cart-float-btn {
   position: fixed;
   bottom: 20px;
@@ -922,7 +479,7 @@ footer {
   font-size: 1.8rem;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   cursor: pointer;
-  z-index: 999; /* Por debajo del modal de imagen, pero por encima de la web */
+  z-index: 999;
   transition: transform 0.2s, background-color 0.2s;
 }
 
@@ -1117,6 +674,7 @@ footer {
   display: block;
 }
 
+/* ── MODIFICACIÓN: TOAST AL CENTRO ── */
 #toast {
   visibility: hidden;
   min-width: 250px;
@@ -1124,34 +682,71 @@ footer {
   color: #fff;
   text-align: center;
   border-radius: 8px;
-  padding: 12px;
+  padding: 12px 20px;
   position: fixed;
   z-index: 3000;
+  
+  /* Centrado en pantalla */
   left: 50%;
-  bottom: 30px;
-  transform: translateX(-50%);
-  font-size: 0.9rem;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  
+  font-size: 1rem;
   font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  opacity: 0;
 }
 
 #toast.show {
   visibility: visible;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  /* Animación rápida de entrada y desvanecimiento de salida */
+  animation: fadeinCenter 0.3s forwards, fadeoutCenter 0.3s 2.7s forwards;
 }
 
-@keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+@keyframes fadeinCenter {
+  from { top: 55%; opacity: 0; }
+  to { top: 50%; opacity: 1; }
 }
 
-@keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+@keyframes fadeoutCenter {
+  from { top: 50%; opacity: 1; }
+  to { top: 45%; opacity: 0; }
 }
 
 @media (min-width: 600px) {
   .panel { padding: 24px 32px 10px; }
   .global-info { padding: 20px 32px 30px; }
   .agrega-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ── NOTAS DEL CARRITO ── */
+.cart-notes {
+  padding: 0 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cart-notes label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--brown);
+}
+
+.cart-notes textarea {
+  width: 100%;
+  height: 60px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--sand);
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.85rem;
+  resize: none; /* Evita que el usuario deforme la caja */
+  outline: none;
+  background-color: white;
+  transition: border-color 0.2s;
+}
+
+.cart-notes textarea:focus {
+  border-color: var(--rose-dark);
 }
