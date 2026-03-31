@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body>
@@ -22,13 +21,10 @@
     <div class="aclaraciones-card">
       <h3>Aclaraciones previas al pedido</h3>
       <ul>
-        <li>Se realizan por pedidos con un <strong>mínimo de 24 hs</strong>. Entregas en los días <strong>martes, jueves
-            y sábado</strong>.</li>
+        <li>Se realizan por pedidos con un <strong>mínimo de 24 hs</strong>. Entregas en los días <strong>martes, jueves y sábado</strong>.</li>
         <li>Pedidos para fiestas o eventos: reservar al menos con <strong>7 días de anticipación</strong>.</li>
-        <li>El monto se abona al retirar o antes de enviar el producto. <strong>(El envío está a cargo del
-            cliente)</strong>.</li>
-        <li>Los budines se dividen en: <strong>tamaño pequeño (250-300g)</strong> y <strong>grande (Medio
-            Kilo)</strong>. El pan pesa 800g aprox.</li>
+        <li>El monto se abona al retirar o antes de enviar el producto. <strong>(El envío está a cargo del cliente)</strong>.</li>
+        <li>Los budines se dividen en: <strong>tamaño pequeño (250-300g)</strong> y <strong>grande (Medio Kilo)</strong>. El pan pesa 800g aprox.</li>
       </ul>
     </div>
 
@@ -46,121 +42,111 @@
       <div class="item-list">
 
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1601000938259-9e92002320b2?w=150&h=150&fit=crop" class="item-img"
-            alt="Budín de Vainilla"
-            onclick="openModal('https://images.unsplash.com/photo-1601000938259-9e92002320b2?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1601000938259-9e92002320b2?w=150&h=150&fit=crop" class="item-img" alt="Budín de Vainilla" onclick="openModal('https://images.unsplash.com/photo-1601000938259-9e92002320b2?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Vainilla</span>
-            <div class="item-price-area">
-              <div class="price-pair"><span class="pt">G $7.700</span><span class="pt">P $5.000</span></div>
+            <div class="item-actions">
+              <button class="btn-add" onclick="addToCart('Budín Vainilla (Pequ)', 5000)">P <span class="price">$5.000</span> ➕</button>
+              <button class="btn-add" onclick="addToCart('Budín Vainilla (Gde)', 7700)">G <span class="price">$7.700</span> ➕</button>
             </div>
           </div>
         </div>
 
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1519869325930-281384150729?w=150&h=150&fit=crop" class="item-img"
-            alt="Budín Glaceado"
-            onclick="openModal('https://images.unsplash.com/photo-1519869325930-281384150729?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1519869325930-281384150729?w=150&h=150&fit=crop" class="item-img" alt="Budín Glaceado" onclick="openModal('https://images.unsplash.com/photo-1519869325930-281384150729?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Glaceado</span>
-            <div class="item-price-area">
-              <div class="price-pair"><span class="pt">G $8.200</span><span class="pt">P $5.200</span></div>
+            <div class="item-actions">
+              <button class="btn-add" onclick="addToCart('Budín Glaceado (Pequ)', 5200)">P <span class="price">$5.200</span> ➕</button>
+              <button class="btn-add" onclick="addToCart('Budín Glaceado (Gde)', 8200)">G <span class="price">$8.200</span> ➕</button>
             </div>
           </div>
         </div>
 
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?w=150&h=150&fit=crop" class="item-img"
-            alt="Budín de Fruta"
-            onclick="openModal('https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?w=150&h=150&fit=crop" class="item-img" alt="Budín de Fruta" onclick="openModal('https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Fruta (banana, naranja o limón)</span>
-            <div class="item-price-area">
-              <div class="price-pair"><span class="pt">G $9.000</span><span class="pt">P $5.800</span></div>
+            <div class="item-actions">
+              <button class="btn-add" onclick="addToCart('Budín Fruta (Pequ)', 5800)">P <span class="price">$5.800</span> ➕</button>
+              <button class="btn-add" onclick="addToCart('Budín Fruta (Gde)', 9000)">G <span class="price">$9.000</span> ➕</button>
             </div>
           </div>
         </div>
 
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1584286595398-a59f21d313f5?w=150&h=150&fit=crop" class="item-img"
-            alt="Budín con Nuez"
-            onclick="openModal('https://images.unsplash.com/photo-1584286595398-a59f21d313f5?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1584286595398-a59f21d313f5?w=150&h=150&fit=crop" class="item-img" alt="Budín con Nuez" onclick="openModal('https://images.unsplash.com/photo-1584286595398-a59f21d313f5?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Nuez</span>
-            <div class="item-price-area">
-              <div class="price-pair"><span class="pt">G $8.700</span><span class="pt">P $5.000</span></div>
+            <div class="item-actions">
+              <button class="btn-add" onclick="addToCart('Budín Nuez (Pequ)', 5000)">P <span class="price">$5.000</span> ➕</button>
+              <button class="btn-add" onclick="addToCart('Budín Nuez (Gde)', 8700)">G <span class="price">$8.700</span> ➕</button>
             </div>
           </div>
         </div>
 
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?w=150&h=150&fit=crop" class="item-img"
-            alt="Budín de Banana con Nuez"
-            onclick="openModal('https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?w=150&h=150&fit=crop" class="item-img" alt="Budín de Banana con Nuez" onclick="openModal('https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Banana con nuez</span>
-            <div class="item-price-area">
-              <div class="price-pair"><span class="pt">G $10.500</span><span class="pt">P $6.800</span></div>
+            <div class="item-actions">
+              <button class="btn-add" onclick="addToCart('Budín Banana/Nuez (Pequ)', 6800)">P <span class="price">$6.800</span> ➕</button>
+              <button class="btn-add" onclick="addToCart('Budín Banana/Nuez (Gde)', 10500)">G <span class="price">$10.500</span> ➕</button>
             </div>
           </div>
         </div>
 
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=150&h=150&fit=crop" class="item-img"
-            alt="Budín Salpicado con Chocolate"
-            onclick="openModal('https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=150&h=150&fit=crop" class="item-img" alt="Budín Salpicado con Chocolate" onclick="openModal('https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Salpicado con chocolate</span>
-            <div class="item-price-area">
-              <div class="price-pair"><span class="pt">G $8.500</span><span class="pt">P $5.300</span></div>
+            <div class="item-actions">
+              <button class="btn-add" onclick="addToCart('Budín Salpicado (Pequ)', 5300)">P <span class="price">$5.300</span> ➕</button>
+              <button class="btn-add" onclick="addToCart('Budín Salpicado (Gde)', 8500)">G <span class="price">$8.500</span> ➕</button>
             </div>
           </div>
         </div>
 
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=150&h=150&fit=crop" class="item-img"
-            alt="Budín Bañado en Chocolate"
-            onclick="openModal('https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=150&h=150&fit=crop" class="item-img" alt="Budín Bañado en Chocolate" onclick="openModal('https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Bañado en chocolate</span>
-            <div class="item-price-area">
-              <div class="price-pair"><span class="pt">G $9.200</span><span class="pt">P $5.600</span></div>
+            <div class="item-actions">
+              <button class="btn-add" onclick="addToCart('Budín Bañado (Pequ)', 5600)">P <span class="price">$5.600</span> ➕</button>
+              <button class="btn-add" onclick="addToCart('Budín Bañado (Gde)', 9200)">G <span class="price">$9.200</span> ➕</button>
             </div>
           </div>
         </div>
 
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1601000938259-9e92002320b2?w=150&h=150&fit=crop" class="item-img"
-            alt="Budín de Vainilla con Chispas de Chocolate"
-            onclick="openModal('https://images.unsplash.com/photo-1601000938259-9e92002320b2?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1601000938259-9e92002320b2?w=150&h=150&fit=crop" class="item-img" alt="Budín de Vainilla con Chispas" onclick="openModal('https://images.unsplash.com/photo-1601000938259-9e92002320b2?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Vainilla con chispas de chocolate</span>
-            <div class="item-price-area">
-              <div class="price-pair"><span class="pt">G $9.200</span><span class="pt">P $5.800</span></div>
+            <div class="item-actions">
+              <button class="btn-add" onclick="addToCart('Budín Chispas (Pequ)', 5800)">P <span class="price">$5.800</span> ➕</button>
+              <button class="btn-add" onclick="addToCart('Budín Chispas (Gde)', 9200)">G <span class="price">$9.200</span> ➕</button>
             </div>
           </div>
         </div>
 
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=150&h=150&fit=crop" class="item-img"
-            alt="Budín Marmolado"
-            onclick="openModal('https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=150&h=150&fit=crop" class="item-img" alt="Budín Marmolado" onclick="openModal('https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Marmolado</span>
-            <div class="item-price-area">
-              <div class="price-pair"><span class="pt">G $9.000</span><span class="pt">P $5.500</span></div>
+            <div class="item-actions">
+              <button class="btn-add" onclick="addToCart('Budín Marmolado (Pequ)', 5500)">P <span class="price">$5.500</span> ➕</button>
+              <button class="btn-add" onclick="addToCart('Budín Marmolado (Gde)', 9000)">G <span class="price">$9.000</span> ➕</button>
             </div>
           </div>
         </div>
 
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1584286595398-a59f21d313f5?w=150&h=150&fit=crop" class="item-img"
-            alt="Budín con Almendras"
-            onclick="openModal('https://images.unsplash.com/photo-1584286595398-a59f21d313f5?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1584286595398-a59f21d313f5?w=150&h=150&fit=crop" class="item-img" alt="Budín con Almendras" onclick="openModal('https://images.unsplash.com/photo-1584286595398-a59f21d313f5?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Con almendras</span>
-            <div class="item-price-area">
-              <div class="price-pair"><span class="pt">G $10.700</span><span class="pt">P $7.000</span></div>
+            <div class="item-actions">
+              <button class="btn-add" onclick="addToCart('Budín Almendras (Pequ)', 7000)">P <span class="price">$7.000</span> ➕</button>
+              <button class="btn-add" onclick="addToCart('Budín Almendras (Gde)', 10700)">G <span class="price">$10.700</span> ➕</button>
             </div>
           </div>
         </div>
@@ -168,11 +154,11 @@
 
       <p class="agrega-title">Agregados posibles</p>
       <div class="agrega-grid">
-        <div class="agrega-pill"><span class="al">🍌 Fruta</span><span class="ap">$1.500</span></div>
-        <div class="agrega-pill"><span class="al">🍫 Chocolate</span><span class="ap">$1.500</span></div>
-        <div class="agrega-pill"><span class="al">🪨 Nuez</span><span class="ap">$1.500</span></div>
-        <div class="agrega-pill"><span class="al">🌰 Almendras</span><span class="ap">$2.000</span></div>
-        <div class="agrega-pill"><span class="al">✨ Glaceado</span><span class="ap">$500</span></div>
+        <div class="agrega-pill" onclick="addToCart('Extra: Fruta', 1500)"><span class="al">🍌 Fruta</span><span class="ap">+$1.500</span></div>
+        <div class="agrega-pill" onclick="addToCart('Extra: Chocolate', 1500)"><span class="al">🍫 Chocolate</span><span class="ap">+$1.500</span></div>
+        <div class="agrega-pill" onclick="addToCart('Extra: Nuez', 1500)"><span class="al">🪨 Nuez</span><span class="ap">+$1.500</span></div>
+        <div class="agrega-pill" onclick="addToCart('Extra: Almendras', 2000)"><span class="al">🌰 Almendras</span><span class="ap">+$2.000</span></div>
+        <div class="agrega-pill" onclick="addToCart('Extra: Glaceado', 500)"><span class="al">✨ Glaceado</span><span class="ap">+$500</span></div>
       </div>
       <p class="nota">Por cualquier otra combinación, ¡consultá por WhatsApp!</p>
     </div>
@@ -183,82 +169,66 @@
       <div class="item-list">
 
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1587668178277-295251f900ce?w=150&h=150&fit=crop" class="item-img"
-            alt="Magdalenas"
-            onclick="openModal('https://images.unsplash.com/photo-1587668178277-295251f900ce?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1587668178277-295251f900ce?w=150&h=150&fit=crop" class="item-img" alt="Magdalenas" onclick="openModal('https://images.unsplash.com/photo-1587668178277-295251f900ce?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Vainilla</span>
-            <div class="item-price-area"><span class="item-price">$5.500</span></div>
+            <div class="item-actions"><button class="btn-add" onclick="addToCart('Magdalenas Vainilla', 5500)"><span class="price">$5.500</span> ➕</button></div>
           </div>
         </div>
 
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?w=150&h=150&fit=crop" class="item-img"
-            alt="Magdalenas"
-            onclick="openModal('https://images.unsplash.com/photo-1550617931-e17a7b70dce2?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?w=150&h=150&fit=crop" class="item-img" alt="Magdalenas" onclick="openModal('https://images.unsplash.com/photo-1550617931-e17a7b70dce2?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Glaceadas (vainilla o limón)</span>
-            <div class="item-price-area"><span class="item-price">$6.000</span></div>
+            <div class="item-actions"><button class="btn-add" onclick="addToCart('Magdalenas Glaceadas', 6000)"><span class="price">$6.000</span> ➕</button></div>
           </div>
         </div>
 
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1587668178277-295251f900ce?w=150&h=150&fit=crop" class="item-img"
-            alt="Magdalenas"
-            onclick="openModal('https://images.unsplash.com/photo-1587668178277-295251f900ce?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1587668178277-295251f900ce?w=150&h=150&fit=crop" class="item-img" alt="Magdalenas" onclick="openModal('https://images.unsplash.com/photo-1587668178277-295251f900ce?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Rellenas con dulce de leche</span>
-            <div class="item-price-area"><span class="item-price">$5.000</span></div>
+            <div class="item-actions"><button class="btn-add" onclick="addToCart('Magdalenas DDL', 5000)"><span class="price">$5.000</span> ➕</button></div>
           </div>
         </div>
 
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1587668178277-295251f900ce?w=150&h=150&fit=crop" class="item-img"
-            alt="Magdalenas"
-            onclick="openModal('https://images.unsplash.com/photo-1587668178277-295251f900ce?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1587668178277-295251f900ce?w=150&h=150&fit=crop" class="item-img" alt="Magdalenas" onclick="openModal('https://images.unsplash.com/photo-1587668178277-295251f900ce?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Vainilla con chips de chocolate</span>
-            <div class="item-price-area"><span class="item-price">$5.200</span></div>
+            <div class="item-actions"><button class="btn-add" onclick="addToCart('Magdalenas Chips Choc', 5200)"><span class="price">$5.200</span> ➕</button></div>
           </div>
         </div>
 
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=150&h=150&fit=crop" class="item-img"
-            alt="Magdalenas"
-            onclick="openModal('https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=150&h=150&fit=crop" class="item-img" alt="Magdalenas" onclick="openModal('https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Chocolate amargo</span>
-            <div class="item-price-area"><span class="item-price">$5.200</span></div>
+            <div class="item-actions"><button class="btn-add" onclick="addToCart('Magdalenas Choc Amargo', 5200)"><span class="price">$5.200</span> ➕</button></div>
           </div>
         </div>
 
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=150&h=150&fit=crop" class="item-img"
-            alt="Magdalenas"
-            onclick="openModal('https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=150&h=150&fit=crop" class="item-img" alt="Magdalenas" onclick="openModal('https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Chocolate amargo con chips</span>
-            <div class="item-price-area"><span class="item-price">$5.500</span></div>
+            <div class="item-actions"><button class="btn-add" onclick="addToCart('Magdalenas Choc Amargo/Chips', 5500)"><span class="price">$5.500</span> ➕</button></div>
           </div>
         </div>
 
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=150&h=150&fit=crop" class="item-img"
-            alt="Magdalenas"
-            onclick="openModal('https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=150&h=150&fit=crop" class="item-img" alt="Magdalenas" onclick="openModal('https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Chocolate rellenas con dulce de leche</span>
-            <div class="item-price-area"><span class="item-price">$6.200</span></div>
+            <div class="item-actions"><button class="btn-add" onclick="addToCart('Magdalenas Choc DDL', 6200)"><span class="price">$6.200</span> ➕</button></div>
           </div>
         </div>
 
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=150&h=150&fit=crop" class="item-img"
-            alt="Magdalenas"
-            onclick="openModal('https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=150&h=150&fit=crop" class="item-img" alt="Magdalenas" onclick="openModal('https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Cacao y dulce de leche (grande)</span>
-            <div class="item-price-area"><span class="item-price">$6.700</span></div>
+            <div class="item-actions"><button class="btn-add" onclick="addToCart('Magdalenas Grandes Cacao/DDL', 6700)"><span class="price">$6.700</span> ➕</button></div>
           </div>
         </div>
       </div>
@@ -270,23 +240,18 @@
       <div class="item-list">
 
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=150&h=150&fit=crop" class="item-img"
-            alt="Pan integral"
-            onclick="openModal('https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=150&h=150&fit=crop" class="item-img" alt="Pan integral" onclick="openModal('https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Pan integral común</span>
-            <div class="item-price-area"><span class="item-price">$5.700</span></div>
+            <div class="item-actions"><button class="btn-add" onclick="addToCart('Pan Integral Común', 5700)"><span class="price">$5.700</span> ➕</button></div>
           </div>
         </div>
 
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=150&h=150&fit=crop" class="item-img"
-            alt="Pan con semillas"
-            onclick="openModal('https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=150&h=150&fit=crop" class="item-img" alt="Pan con semillas" onclick="openModal('https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Pan integral con semillas</span>
-            <div class="item-price-area"><span class="item-price"
-                style="color:var(--brown-light); font-size: 0.9rem;">Consultar</span></div>
+            <div class="item-price-area"><span class="item-price" style="color:var(--brown-light); font-size: 0.9rem;">Consultar al WhatsApp</span></div>
           </div>
         </div>
       </div>
@@ -295,16 +260,13 @@
       <p class="panel-subtitle">Rellenos disponibles — precio por <strong>100g</strong></p>
 
       <div style="text-align: center; margin-bottom: 15px;">
-        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=250&h=150&fit=crop"
-          style="border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 100%; max-width: 300px; height: 120px; object-fit: cover; cursor: zoom-in;"
-          alt="Pepas"
-          onclick="openModal('https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=1200&h=800&fit=max')">
+        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=250&h=150&fit=crop" style="border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 100%; max-width: 300px; height: 120px; object-fit: cover; cursor: zoom-in;" alt="Pepas" onclick="openModal('https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=1200&h=800&fit=max')">
       </div>
 
       <div class="agrega-grid">
-        <div class="agrega-pill"><span class="al">🍏 Membrillo</span><span class="ap">$3.500</span></div>
-        <div class="agrega-pill"><span class="al">🍮 Dulce de leche</span><span class="ap">$3.500</span></div>
-        <div class="agrega-pill"><span class="al">🍠 Dulce de batata</span><span class="ap">$3.500</span></div>
+        <div class="agrega-pill" onclick="addToCart('100g Pepas Membrillo', 3500)"><span class="al">🍏 Membrillo</span><span class="ap">+$3.500</span></div>
+        <div class="agrega-pill" onclick="addToCart('100g Pepas DDL', 3500)"><span class="al">🍮 Dulce de leche</span><span class="ap">+$3.500</span></div>
+        <div class="agrega-pill" onclick="addToCart('100g Pepas Batata', 3500)"><span class="al">🍠 Dulce de batata</span><span class="ap">+$3.500</span></div>
       </div>
     </div>
 
@@ -315,12 +277,10 @@
       <p class="agrega-title" style="margin-top:0;margin-bottom:8px;">Pan</p>
       <div class="item-list">
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=150&h=150&fit=crop" class="item-img"
-            alt="Pan Ceto"
-            onclick="openModal('https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=150&h=150&fit=crop" class="item-img" alt="Pan Ceto" onclick="openModal('https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Pan ceto con lino dorado</span>
-            <div class="item-price-area"><span class="item-price">$8.000</span></div>
+            <div class="item-actions"><button class="btn-add" onclick="addToCart('Pan Ceto Lino', 8000)"><span class="price">$8.000</span> ➕</button></div>
           </div>
         </div>
       </div>
@@ -328,48 +288,38 @@
       <p class="agrega-title">Budines</p>
       <div class="item-list">
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1601000938259-9e92002320b2?w=150&h=150&fit=crop" class="item-img"
-            alt="Budín"
-            onclick="openModal('https://images.unsplash.com/photo-1601000938259-9e92002320b2?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1601000938259-9e92002320b2?w=150&h=150&fit=crop" class="item-img" alt="Budín" onclick="openModal('https://images.unsplash.com/photo-1601000938259-9e92002320b2?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Vainilla</span>
-            <div class="item-price-area"><span class="item-price">$9.000</span></div>
+            <div class="item-actions"><button class="btn-add" onclick="addToCart('Budín Almendras Vainilla', 9000)"><span class="price">$9.000</span> ➕</button></div>
           </div>
         </div>
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=150&h=150&fit=crop" class="item-img"
-            alt="Budín"
-            onclick="openModal('https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=150&h=150&fit=crop" class="item-img" alt="Budín" onclick="openModal('https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Cacao amargo</span>
-            <div class="item-price-area"><span class="item-price">$9.500</span></div>
+            <div class="item-actions"><button class="btn-add" onclick="addToCart('Budín Almendras Cacao Amargo', 9500)"><span class="price">$9.500</span> ➕</button></div>
           </div>
         </div>
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=150&h=150&fit=crop" class="item-img"
-            alt="Budín"
-            onclick="openModal('https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=150&h=150&fit=crop" class="item-img" alt="Budín" onclick="openModal('https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Cacao y nuez</span>
-            <div class="item-price-area"><span class="item-price">$10.500</span></div>
+            <div class="item-actions"><button class="btn-add" onclick="addToCart('Budín Almendras Cacao/Nuez', 10500)"><span class="price">$10.500</span> ➕</button></div>
           </div>
         </div>
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1584286595398-a59f21d313f5?w=150&h=150&fit=crop" class="item-img"
-            alt="Budín"
-            onclick="openModal('https://images.unsplash.com/photo-1584286595398-a59f21d313f5?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1584286595398-a59f21d313f5?w=150&h=150&fit=crop" class="item-img" alt="Budín" onclick="openModal('https://images.unsplash.com/photo-1584286595398-a59f21d313f5?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Vainilla y nuez</span>
-            <div class="item-price-area"><span class="item-price">$10.000</span></div>
+            <div class="item-actions"><button class="btn-add" onclick="addToCart('Budín Almendras Vainilla/Nuez', 10000)"><span class="price">$10.000</span> ➕</button></div>
           </div>
         </div>
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=150&h=150&fit=crop" class="item-img"
-            alt="Budín"
-            onclick="openModal('https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=150&h=150&fit=crop" class="item-img" alt="Budín" onclick="openModal('https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Marmolado</span>
-            <div class="item-price-area"><span class="item-price">$9.500</span></div>
+            <div class="item-actions"><button class="btn-add" onclick="addToCart('Budín Almendras Marmolado', 9500)"><span class="price">$9.500</span> ➕</button></div>
           </div>
         </div>
       </div>
@@ -382,48 +332,38 @@
       <span class="special-tag" style="margin-top:0;">SIN TACC</span>
       <div class="item-list">
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1601000938259-9e92002320b2?w=150&h=150&fit=crop" class="item-img"
-            alt="Budín sin tacc"
-            onclick="openModal('https://images.unsplash.com/photo-1601000938259-9e92002320b2?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1601000938259-9e92002320b2?w=150&h=150&fit=crop" class="item-img" alt="Budín sin tacc" onclick="openModal('https://images.unsplash.com/photo-1601000938259-9e92002320b2?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Budín de vainilla</span>
-            <div class="item-price-area"><span class="item-price">$7.500</span></div>
+            <div class="item-actions"><button class="btn-add" onclick="addToCart('Budín Vainilla (Sin TACC)', 7500)"><span class="price">$7.500</span> ➕</button></div>
           </div>
         </div>
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?w=150&h=150&fit=crop" class="item-img"
-            alt="Budín sin tacc"
-            onclick="openModal('https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?w=150&h=150&fit=crop" class="item-img" alt="Budín sin tacc" onclick="openModal('https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Budín de plátano / naranja</span>
-            <div class="item-price-area"><span class="item-price">$8.000</span></div>
+            <div class="item-actions"><button class="btn-add" onclick="addToCart('Budín Plátano/Naranja (Sin TACC)', 8000)"><span class="price">$8.000</span> ➕</button></div>
           </div>
         </div>
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=150&h=150&fit=crop" class="item-img"
-            alt="Budín sin tacc"
-            onclick="openModal('https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=150&h=150&fit=crop" class="item-img" alt="Budín sin tacc" onclick="openModal('https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Budín de cacao</span>
-            <div class="item-price-area"><span class="item-price">$8.500</span></div>
+            <div class="item-actions"><button class="btn-add" onclick="addToCart('Budín Cacao (Sin TACC)', 8500)"><span class="price">$8.500</span> ➕</button></div>
           </div>
         </div>
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=150&h=150&fit=crop" class="item-img"
-            alt="Budín sin tacc"
-            onclick="openModal('https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=150&h=150&fit=crop" class="item-img" alt="Budín sin tacc" onclick="openModal('https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Budín marmolado</span>
-            <div class="item-price-area"><span class="item-price">$8.000</span></div>
+            <div class="item-actions"><button class="btn-add" onclick="addToCart('Budín Marmolado (Sin TACC)', 8000)"><span class="price">$8.000</span> ➕</button></div>
           </div>
         </div>
         <div class="item-row">
-          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=150&h=150&fit=crop" class="item-img"
-            alt="Pan sin tacc"
-            onclick="openModal('https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200&h=800&fit=max')">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=150&h=150&fit=crop" class="item-img" alt="Pan sin tacc" onclick="openModal('https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200&h=800&fit=max')">
           <div class="item-info">
             <span class="item-label">Pan común</span>
-            <div class="item-price-area"><span class="item-price">$8.500</span></div>
+            <div class="item-actions"><button class="btn-add" onclick="addToCart('Pan Común (Sin TACC)', 8500)"><span class="price">$8.500</span> ➕</button></div>
           </div>
         </div>
       </div>
@@ -447,17 +387,41 @@
     <img class="modal-content" id="img01" onclick="event.stopPropagation()">
   </div>
 
+  <div class="cart-float-btn" onclick="toggleCart()">
+    🛒 <span class="cart-badge" id="cart-count">0</span>
+  </div>
+
+  <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h2>Tu Pedido</h2>
+      <button class="close-cart" onclick="toggleCart()">&times;</button>
+    </div>
+    
+    <div class="cart-items" id="cart-items-container">
+      <div class="cart-empty-msg">Tu carrito está vacío 🥺</div>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cart-total-price">$0</span>
+      </div>
+      <button class="btn-whatsapp" onclick="sendWhatsAppOrder()">
+        💬 Enviar Pedido
+      </button>
+    </div>
+  </div>
+
+  <div id="toast">Añadido al carrito</div>
+
   <footer>
     <div class="footer-text">
       <strong>¿Hacemos un pedido?</strong>
       <p>🗓️ Entregas: Mar, Jue y Sáb</p>
     </div>
-    <a class="whatsapp-btn" href="https://wa.me/549XXXXXXXXXX" target="_blank">
-      💬 Pedir
-    </a>
   </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
